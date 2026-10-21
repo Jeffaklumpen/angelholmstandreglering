@@ -278,3 +278,17 @@
   .orthodontics-final-cta{padding:24px}
   .orthodontics-copy .step{gap:12px;padding:20px}
 }
+
+
+/* Enhetliga medarbetarkort på Om oss – bild, yrkesroll och presentation i samma ruta. */
+.team-profiles{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:24px}
+.team-profile{flex:0 1 calc((100% - 48px)/3);min-width:0;display:flex;flex-direction:column;background:#fff;border:1px solid #D3E1CD;border-radius:16px;overflow:hidden;box-shadow:0 9px 24px rgba(34,58,36,.055)}
+.team-profile-photo{background:#F1F5EF}
+.team-profile-photo img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top;display:block}
+.team-profile-content{padding:26px 25px 30px;flex:1;display:flex;flex-direction:column;align-items:flex-start}
+.team-profile-content h3{font-size:clamp(1.18rem,1.6vw,1.5rem);line-height:1.25;margin:0 0 9px;letter-spacing:-.025em}
+.team-profile-role{font-size:.85rem;font-weight:800;color:#344E35;margin:0 0 16px;line-height:1.5}
+.team-profile-role::after{content:'';display:block;margin-top:17px;background:#9DB38F;width:45px;height:3px;border-radius:5px}
+.team-profile-bio{font-size:.91rem;line-height:1.72;color:#526B53;margin:0}
+@media(max-width:1000px){.team-profile{flex-basis:calc((100% - 24px)/2)}}
+@media(max-width:620px){.team-profiles{gap:19px}.team-profile{flex-basis:100%;max-width:440px}.team-profile-content{padding:23px 23px 27px}.team-profile-photo img{aspect-ratio:4/4.1}}
