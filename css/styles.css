@@ -185,3 +185,17 @@
  .footer-form-panel .contact-form-actions .button{width:100%}
  .footer-fact>a:not(.footer-map-link){font-size:.83rem}
 }
+
+
+/* Visa hela gruppfotot på startsidan och ge det en bredare kolumn. */
+.split-about{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(28px,4.5vw,65px)}
+.split-about .split-image--uncropped{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;border-radius:var(--radius)}
+@media(max-width:800px){.split-about{grid-template-columns:minmax(0,1fr);gap:30px}.split-about .split-image--uncropped{height:auto;max-height:none}}
+
+/* Samma ljusgröna bakgrund bakom hela kontaktområdet, ingen vit formulärpanel. */
+.footer-form-panel{background:transparent;color:var(--deep);box-shadow:none;border:none;border-radius:0;padding:0}
+.footer-form-panel .contact-field input,.footer-form-panel .contact-field textarea{background:rgba(255,255,255,.25);border-color:rgba(52,78,53,.42);color:var(--deep)}
+.footer-form-panel .contact-field input::placeholder,.footer-form-panel .contact-field textarea::placeholder{color:#435b42}
+.footer-form-panel .contact-field input:focus,.footer-form-panel .contact-field textarea:focus{background:rgba(255,255,255,.5)}
+.footer-form-panel .contact-form-actions p,.footer-form-panel .form-status{color:var(--deep)}
+@media(max-width:520px){.footer-form-panel{padding:0}}
