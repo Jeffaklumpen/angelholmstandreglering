@@ -357,9 +357,6 @@
 }
 
 
-/* Tydlig direktlänk till betalningsgaranti i alla sidors huvudmeny. */
-.nav > a.nav-guarantee:not(.button){display:inline-flex;align-items:center;justify-content:center;padding:10px 13px;border:1px solid #CFDCC8;border-radius:7px;background:#EDF4E9;color:#344E35;font-weight:800;line-height:1.4}
-.nav > a.nav-guarantee:not(.button):hover,.nav > a.nav-guarantee[aria-current="page"]:not(.button){background:#9DB38F;border-color:#9DB38F;color:#263C28;text-decoration:none}
 .guarantee-context-link{margin:10px 0 19px}
 .guarantee-context-link a,.guarantee-inline-cta,.booking-guarantee-link{font-size:.88rem;font-weight:800;text-underline-offset:4px;color:#344E35}
 .guarantee-context-link a:hover,.guarantee-inline-cta:hover,.booking-guarantee-link:hover{text-decoration-thickness:2px}
@@ -402,9 +399,7 @@
 .guarantee-last-inner p{max-width:750px;color:#344E35;margin:0}
 .guarantee-last-inner .button{white-space:nowrap;background:#344E35;color:#fff;border-color:#344E35}
 .guarantee-last-inner .button:hover{background:#263C28;border-color:#263C28}
-@media(max-width:1100px){.nav > a.nav-guarantee:not(.button){padding:8px 9px;font-size:.75rem}}
 @media(max-width:800px){
-  .nav > a.nav-guarantee:not(.button){width:100%;padding:12px 15px;justify-content:flex-start;font-size:1rem}
   .guarantee-intro-grid{grid-template-columns:1fr}
   .guarantee-keyfacts{position:static;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
   .guarantee-facts-heading{grid-column:1/-1;margin:0}
