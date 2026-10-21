@@ -112,7 +112,8 @@
           lastName: String(data.get("lastName") || "").trim(),
           phone: String(data.get("phone") || "").trim(),
           email: String(data.get("email") || "").trim(),
-          message: String(data.get("message") || "").trim()
+          message: String(data.get("message") || "").trim(),
+          treatment: String(data.get("treatment") || "").trim()
         };
         const response = await fetch(endpoint, {
           method: "POST",
