@@ -389,8 +389,6 @@
 .guarantee-address{background:#E4EEDF;border:1px solid #C5D9BD;border-left:5px solid #344E35;border-radius:12px;margin-top:20px;padding:20px 24px}
 .guarantee-address>span:first-child{display:block;text-transform:uppercase;letter-spacing:.13em;font-weight:800;font-size:.68rem;color:#344E35;margin-bottom:10px}
 .guarantee-address address{font-size:1.06rem;font-style:normal;line-height:1.6;color:#344E35}
-.guarantee-copy-address{display:inline-flex;align-items:center;gap:10px;background:#344E35;color:white;border:1px solid #344E35;border-radius:6px;padding:9px 14px;font-size:.78rem;font-weight:800;margin-top:17px;cursor:pointer}
-.guarantee-copy-address:hover{background:#263C28}
 .guarantee-reminder{display:flex;align-items:flex-start;gap:19px;padding:25px 29px;background:#DFEBD7;border:1px solid #C8D8C0;border-radius:12px;margin:28px 0 0}
 .guarantee-reminder>span{display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:#344E35;color:#fff;font-weight:800}
 .guarantee-reminder h3{font-size:1.15rem;margin:0 0 8px}
