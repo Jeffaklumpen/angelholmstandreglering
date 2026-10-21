@@ -132,6 +132,63 @@
     });
   });
 
+
+  // Uppdateringar på startsidan. Text skrivs säkert med textContent.
+  const clinicNewsFeed = document.querySelector("#clinic-news-feed[data-news-source]");
+  if (clinicNewsFeed) {
+    const renderNews = async () => {
+      try {
+        const response = await fetch(clinicNewsFeed.dataset.newsSource, { cache: "no-store" });
+        if (!response.ok) throw new Error("News not available");
+        const data = await response.json();
+        if (!Array.isArray(data.updates)) throw new Error("Invalid news list");
+        const news = data.updates
+          .filter(item => item && item.active !== false && typeof item.title === "string" &&
+            item.title.trim() && typeof item.text === "string" && item.text.trim())
+          .sort((a, b) => {
+            if (!!a.important !== !!b.important) return a.important ? -1 : 1;
+            return String(b.date || "").localeCompare(String(a.date || ""));
+          })
+          .slice(0, 5);
+        if (!news.length) return;
+        const fragment = document.createDocumentFragment();
+        for (const item of news) {
+          const article = document.createElement("article");
+          article.className = "clinic-news-item";
+          const meta = document.createElement("div");
+          meta.className = "clinic-news-meta";
+          if (item.important) {
+            const tag = document.createElement("span");
+            tag.className = "clinic-news-important";
+            tag.textContent = "Viktigt";
+            meta.appendChild(tag);
+          }
+          if (typeof item.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(item.date)) {
+            const date = new Date(item.date + "T12:00:00");
+            if (!Number.isNaN(date.getTime())) {
+              const time = document.createElement("time");
+              time.dateTime = item.date;
+              time.textContent = new Intl.DateTimeFormat("sv-SE", { day: "numeric", month: "long", year: "numeric" }).format(date);
+              meta.appendChild(time);
+            }
+          }
+          const heading = document.createElement("h3");
+          heading.textContent = item.title;
+          const text = document.createElement("p");
+          text.textContent = item.text;
+          if (meta.childNodes.length) article.appendChild(meta);
+          article.append(heading, text);
+          fragment.appendChild(article);
+        }
+        clinicNewsFeed.replaceChildren(fragment);
+      } catch (error) {
+        // Om källan är otillgänglig visas befintligt tomtillstånd i HTML.
+        console.warn("Kunde inte ladda kliniknyheter.", error);
+      }
+    };
+    renderNews();
+  }
+
   document.querySelectorAll("[data-year]").forEach(element => {
     element.textContent = new Date().getFullYear();
   });
