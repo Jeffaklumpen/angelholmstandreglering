@@ -1,0 +1,4 @@
+{
+  "_instruction": "Lägg till klinikens meddelanden i updates-listan. Fyll i rubrik, text och datum. Sätt important till true för särskilt viktiga meddelanden. Sätt active till false för att dölja ett tidigare meddelande. Detta är en förhandslösning; innan lansering ska redigeringen flyttas till Wix CMS.",
+  "updates": []
+}
