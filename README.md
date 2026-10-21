@@ -27,6 +27,36 @@ En första ny version av **[Ängelholms Tandreglering](https://www.angelholmstan
 
 Gemensamma resurser: `css/styles.css`, `js/main.js`, `bilder/`.
 
+
+## Senaste nytt på kliniken
+
+Startsidan har en tydlig sektion **Senaste nytt på kliniken**, efter hero/introduktionen och före behandlingarna.
+
+Under utvecklingen ändrar du meddelanden i `data/clinic-news.json`. Exempel (lägg in i listan `updates`):
+
+```json
+{
+  "updates": [
+    {
+      "date": "2026-11-01",
+      "title": "Exempelrubrik – ersätt med korrekt meddelande",
+      "text": "Skriv den information som patienterna behöver känna till.",
+      "important": true,
+      "active": true
+    }
+  ]
+}
+```
+
+Exemplet ovan är **endast dokumentation**, inte publicerad information. Utan några inlägg visas `Inga aktuella meddelanden just nu.` Upp till fem aktuella inlägg visas, med viktiga först, därefter nyast. Sätt `active` till `false` för att dölja ett inlägg. Före lansering ska klinikens personal kunna hantera dessa meddelanden i Wix CMS – JSON-filen är en förhandslösning.
+
+## Karta, bilder och kontaktformulär
+
+- En Google Maps-karta utan extra rubriker visas i full bredd direkt före footern.
+- Footern innehåller kontaktuppgifter och ett kompakt formulär för förnamn, efternamn, telefonnummer, frivillig e-post och meddelande.
+- **Skicka-knappen är medvetet avaktiverad** eftersom projektet på GitHub Pages saknar en säker e-postserver. Ingen data skickas i nuvarande läge. Koppla till en serverhanterad, testad formulärlösning innan publicering och lägg inte API-nycklar i frontend.
+- Bilderna `bilder/tandställning.jpg` och `bilder/om-oss.jpg` är de nuvarande filnamnen i GitHub. Vid ändring av en filändelse måste referenserna uppdateras.
+
 ## Status
 
 ✅ Responsiv första designversion med befintliga bilder  
