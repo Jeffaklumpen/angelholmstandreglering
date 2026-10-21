@@ -93,7 +93,7 @@
     const active = endpoint.startsWith("https://");
     if (!active) {
       submit.disabled = true;
-      status.textContent = "Förhandsvisning: Formuläret är inte aktiverat ännu. Ring eller mejla oss tills kopplingen till Wix är klar.";
+      status.textContent = "";
       return;
     }
     submit.disabled = false;
