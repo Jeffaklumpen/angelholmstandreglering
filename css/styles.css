@@ -416,3 +416,19 @@
   .guarantee-reminder{padding:20px;gap:12px}
   .guarantee-last-inner .button{white-space:normal}
 }
+
+
+/* Uppdaterade personalbilder (1066 × 1160): samma proportioner och ingen beskärning. */
+.team-grid .person img,
+.team-profile-photo img{
+  width:100%;
+  height:auto;
+  aspect-ratio:1066 / 1160;
+  object-fit:contain;
+  object-position:center center;
+}
+.team-grid .person img{background:#E9F0E6}
+.team-profile-photo img{background:#F1F5EF}
+@media(max-width:620px){
+  .team-profile-photo img{aspect-ratio:1066 / 1160}
+}
