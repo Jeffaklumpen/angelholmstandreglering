@@ -190,21 +190,6 @@
     renderNews();
   }
 
-  // Kopiera den publika postadressen från betalningsgarantiguiden.
-  const addressButton = document.querySelector("[data-copy-guarantee-address]");
-  if (addressButton) {
-    addressButton.addEventListener("click", async () => {
-      const status = document.querySelector("[data-copy-status]");
-      try {
-        await navigator.clipboard.writeText("Ängelholms Tandreglering\nLaxgatan 4\n262 37 Ängelholm");
-        if (status) status.textContent = "Adressen är kopierad.";
-        addressButton.firstChild.textContent = "Adressen kopierad ";
-      } catch {
-        if (status) status.textContent = "Kopiering misslyckades. Markera och kopiera adressen ovanför.";
-      }
-    });
-  }
-
   document.querySelectorAll("[data-year]").forEach(element => {
     element.textContent = new Date().getFullYear();
   });
