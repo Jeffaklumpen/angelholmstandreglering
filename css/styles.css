@@ -219,3 +219,62 @@
 .footer-form-panel .contact-form-actions .button{background:#344E35;border:1px solid #344E35;color:#FFFFFF;opacity:1;box-shadow:none}
 .footer-form-panel .contact-form-actions .button:hover{background:#263C28;border-color:#263C28;color:#FFFFFF}
 .footer-form-panel .contact-form-actions .button:disabled{background:#344E35;border-color:#344E35;color:#FFFFFF;opacity:1;cursor:not-allowed;box-shadow:none;transform:none}
+
+
+/* Tandställning i Ängelholm: lättläst, fördjupande innehåll för patienter. */
+.orthodontics-hero-cta{margin-top:14px}
+.orthodontics-copy{min-width:0}
+.orthodontics-copy section{scroll-margin-top:110px}
+.orthodontics-copy .orthodontics-summary h2{margin-top:16px}
+.orthodontics-copy .orthodontics-summary>p:first-of-type{font-size:1.08rem;line-height:1.9}
+.orthodontics-copy>section>h2{padding-top:10px;margin-bottom:22px}
+.orthodontics-copy h3{letter-spacing:-.02em}
+.orthodontics-copy strong{color:var(--deep)}
+.orthodontics-copy li{padding-left:4px;margin:0 0 10px}
+.orthodontics-copy li::marker{color:var(--sea)}
+.orthodontics-copy a:not(.button){text-underline-offset:3px;text-decoration-color:#9DB38F}
+.orthodontics-copy a:not(.button):hover{color:#344E35;text-decoration-thickness:2px}
+.orthodontics-toc{padding:23px 26px;border:1px solid #DDE6D8;border-left:4px solid var(--sage);border-radius:12px;background:#F4F8F1;margin:35px 0 42px}
+.orthodontics-toc strong{font-size:.93rem;display:block;margin-bottom:13px}
+.orthodontics-toc>div{display:grid;grid-template-columns:1fr 1fr;gap:9px 20px}
+.orthodontics-toc a{font-size:.84rem;color:var(--deep);text-decoration:none}
+.orthodontics-toc a:hover{text-decoration:underline}
+.orthodontics-types{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin:27px 0}
+.orthodontics-type{padding:26px;background:#F2F7EF;border:1px solid #DDE7D8;border-radius:13px}
+.orthodontics-type-label{display:block;font-size:.69rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:var(--deep)}
+.orthodontics-type h3{font-size:1.25rem;margin:14px 0 12px}
+.orthodontics-type p{font-size:.92rem;line-height:1.75;margin-bottom:0}
+.orthodontics-steps{margin:23px 0 30px}
+.orthodontics-steps .step{border:1px solid #DAE5D5}
+.orthodontics-steps .step h3{margin-top:0}
+.orthodontics-info-list{display:grid;gap:0;margin:25px 0 32px;border-top:1px solid #D5E2CE}
+.orthodontics-info-list>div{padding:20px 0;border-bottom:1px solid #D5E2CE}
+.orthodontics-info-list h3{margin:0 0 8px}
+.orthodontics-info-list p{margin:0;font-size:.95rem}
+.orthodontics-tip{background:#EAF2E6;border-radius:12px;border-left:4px solid var(--sage);padding:22px 25px;margin:30px 0}
+.orthodontics-tip>strong{display:block;margin-bottom:7px}
+.orthodontics-tip p{margin:0;font-size:.95rem}
+.orthodontics-external{font-size:.87rem}
+.orthodontics-faq{margin:25px 0 35px;border-top:1px solid #D3DFCD}
+.orthodontics-faq>div{padding:23px 0;border-bottom:1px solid #D3DFCD}
+.orthodontics-faq h3{font-size:1.12rem;margin:0 0 10px}
+.orthodontics-faq p{margin:0;font-size:.96rem;line-height:1.8}
+.orthodontics-final-cta{background:#F0F6EC;border:1px solid #DCE8D5;border-radius:16px;padding:30px;margin-top:40px}
+.orthodontics-final-cta h2{font-size:clamp(1.6rem,2.5vw,2.3rem)!important;margin:13px 0 15px!important}
+.orthodontics-final-cta p{font-size:.98rem}
+.orthodontics-final-cta .button{margin-top:8px}
+.orthodontics-aside-note{margin-top:25px;padding-top:20px;border-top:1px solid #D5E2CE;font-size:.82rem}
+.orthodontics-aside-note p{margin:7px 0;color:var(--quiet);font-size:.82rem}
+@media(max-width:1100px){
+  .orthodontics-types{grid-template-columns:1fr}
+}
+@media(max-width:800px){
+  .orthodontics-toc>div{grid-template-columns:1fr 1fr}
+  .orthodontics-types{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+  .orthodontics-toc{padding:20px}
+  .orthodontics-toc>div,.orthodontics-types{grid-template-columns:1fr}
+  .orthodontics-final-cta{padding:24px}
+  .orthodontics-copy .step{gap:12px;padding:20px}
+}
