@@ -19,7 +19,6 @@ En första ny version av **[Ängelholms Tandreglering](https://www.angelholmstan
 - `tandreglering/index.html` – tandställning
 - `invisalign/index.html` – Invisalign
 - `tandblekning/index.html` – tandblekning
-- `galleri/index.html` – galleri
 - `blogg/index.html` – bloggöversikt (artiklarna öppnas tillfälligt hos Wix)
 - `om-oss/index.html` – om kliniken och personalen
 - `boka-tid/index.html` – information och länk till befintligt bokningsformulär
