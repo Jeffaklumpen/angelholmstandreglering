@@ -109,3 +109,79 @@
   .contact-form-actions{align-items:stretch;flex-direction:column;gap:18px}
   .contact-form-actions .button{width:100%}
 }
+
+
+/* Senaste nytt – viktiga uppdateringar nära toppen av startsidan. */
+.clinic-news{background:#fff;padding:58px 0 22px}
+.clinic-news-inner{display:grid;grid-template-columns:minmax(230px,.65fr) minmax(0,1.35fr);align-items:start;gap:clamp(25px,5vw,75px);padding:32px 38px;border-radius:16px;border:1px solid #D5E1CF;border-left:6px solid var(--sage);background:#F5F8F2}
+.clinic-news-heading h2{font-size:clamp(1.6rem,2.2vw,2.5rem);margin:12px 0 0;line-height:1.24}
+.clinic-news-feed{min-width:0}
+.clinic-news-empty{margin:12px 0 0;color:var(--quiet);font-size:.96rem}
+.clinic-news-item{padding:0 0 19px}
+.clinic-news-item+.clinic-news-item{padding:20px 0 15px;border-top:1px solid #D0DDCB}
+.clinic-news-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:.73rem;color:var(--quiet);font-weight:700;margin-bottom:8px}
+.clinic-news-important{display:inline-flex;background:var(--sage);color:var(--deep);font-size:.68rem;padding:3px 9px;border-radius:4px;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
+.clinic-news-item h3{font-size:1.06rem;line-height:1.4;margin:0 0 7px}
+.clinic-news-item p{font-size:.91rem;color:var(--quiet);margin:0;white-space:pre-line}
+
+/* Karta utan text, direkt före footern. */
+.location-section{padding:0;background:#EAF1E6}
+.location-map{height:clamp(300px,34vw,440px);width:100%;display:block;border:0}
+
+/* Tvådelad, kompakt footer: kontaktinformation och formulär i samma sektion. */
+.footer{background:#344E35;color:#fff;padding:0}
+.footer-main{background:#9DB38F;padding:clamp(42px,6vw,78px) 0;color:var(--deep)}
+.footer-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(30px,5vw,70px);align-items:start}
+.footer-about .eyebrow.on-dark{color:var(--deep)}
+.footer-about h2{font-size:clamp(2rem,3.15vw,3.4rem);max-width:440px;margin:15px 0 13px}
+.footer-intro{color:var(--deep);max-width:430px;font-size:.91rem;margin:0 0 24px}
+.footer-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 23px}
+.footer-fact{min-width:0;border-top:1px solid rgba(52,78,53,.25);padding-top:11px}
+.footer-fact>span{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;font-weight:800;margin-bottom:5px}
+.footer-fact>a:not(.footer-map-link){font-size:.92rem;font-weight:700;text-decoration:none;overflow-wrap:anywhere}
+.footer-fact p{font-size:.87rem;line-height:1.65;margin:0}
+.footer-fact small{display:block;font-size:.73rem;color:var(--deep);margin-top:4px}
+.footer-map-link{display:inline-block;margin-top:6px;font-size:.78rem;font-weight:700}
+.footer-form-panel{background:#fff;color:var(--deep);padding:clamp(22px,3vw,34px);border-radius:16px;box-shadow:0 15px 36px rgba(41,66,42,.11)}
+.footer-form-header{margin-bottom:20px}
+.footer-form-header h3{font-size:clamp(1.35rem,1.95vw,1.75rem);margin:9px 0 0}
+.footer-form-panel .contact-form{max-width:none}
+.footer-form-panel .contact-form-grid{gap:12px 15px}
+.footer-form-panel .contact-field{gap:5px}
+.footer-form-panel .contact-field label{font-size:.75rem}
+.footer-form-panel .contact-field label span{font-size:.73rem}
+.footer-form-panel .contact-field input{min-height:43px;padding:9px 12px;font-size:.87rem}
+.footer-form-panel .contact-field textarea{min-height:96px;padding:11px 12px;font-size:.87rem;line-height:1.55}
+.footer-form-panel .contact-form-actions{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;margin-top:15px;align-items:center}
+.footer-form-panel .contact-form-actions p{font-size:.72rem;line-height:1.45;color:var(--quiet)}
+.footer-form-panel .contact-form-actions .button{min-height:44px;white-space:nowrap;padding:10px 16px;font-size:.8rem}
+.footer-form-panel .form-status{margin:12px 0 0;font-size:.71rem;line-height:1.5;color:#536754}
+.footer-bottom{background:#273D29;color:#fff;padding:24px 0}
+.footer-bottom .footer-inner{gap:18px}
+.footer-bottom a{color:#fff}
+@media(max-width:980px){
+ .footer-layout{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px}
+ .footer-facts{grid-template-columns:1fr;gap:12px}
+ .footer-form-panel .contact-form-actions{grid-template-columns:1fr}
+ .footer-form-panel .contact-form-actions .button{justify-self:start}
+}
+@media(max-width:800px){
+ .clinic-news-inner{grid-template-columns:1fr;gap:12px;padding:26px}
+ .clinic-news{padding:45px 0 10px}
+ .clinic-news-empty{margin:0}
+ .footer-layout{grid-template-columns:1fr;gap:28px}
+ .footer-facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+ .footer-main{padding:52px 0}
+ .location-section{padding:0}
+ .location-map{height:330px}
+}
+@media(max-width:520px){
+ .clinic-news-inner{padding:22px}
+ .footer-facts{grid-template-columns:1fr 1fr;gap:14px}
+ .footer-form-panel{padding:23px 18px}
+ .footer-form-panel .contact-form-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .footer-form-panel .contact-field.wide{grid-column:1/-1}
+ .footer-form-panel .contact-form-actions{display:flex;flex-direction:column;align-items:stretch;gap:12px}
+ .footer-form-panel .contact-form-actions .button{width:100%}
+ .footer-fact>a:not(.footer-map-link){font-size:.83rem}
+}
